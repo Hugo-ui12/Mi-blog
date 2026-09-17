@@ -1,0 +1,762 @@
+/* =====================================
+   CONFIGURACIÓN GENERAL
+===================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f8f5;
+    color: #17251c;
+}
+
+
+/* =====================================
+   BARRA DE NAVEGACIÓN
+===================================== */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 75px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 7%;
+
+    background: rgba(10, 25, 17, 0.94);
+
+    z-index: 1000;
+
+    backdrop-filter: blur(10px);
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+}
+
+.logo span {
+    color: #67e38a;
+}
+
+.navbar nav {
+    display: flex;
+    gap: 28px;
+}
+
+.navbar nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.navbar nav a:hover {
+    color: #67e38a;
+}
+
+
+/* =====================================
+   HERO / INICIO
+===================================== */
+
+.hero {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+
+    position: relative;
+
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(3, 20, 10, 0.88),
+            rgba(3, 20, 10, 0.45),
+            rgba(3, 20, 10, 0.10)
+        ),
+        url("imagenes/fondo-eccorunner.jpeg");
+
+    background-size: cover;
+    background-position: center;
+
+    color: white;
+}
+
+.hero-contenido {
+    width: 90%;
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding-top: 70px;
+}
+
+.etiqueta {
+    display: inline-block;
+
+    padding: 10px 18px;
+
+    border: 1px solid #67e38a;
+    border-radius: 30px;
+
+    color: #67e38a;
+
+    font-size: 13px;
+    font-weight: bold;
+
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-size: clamp(65px, 10vw, 130px);
+
+    line-height: 0.9;
+
+    font-weight: 900;
+
+    letter-spacing: -5px;
+
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: #67e38a;
+}
+
+.hero h2 {
+    font-size: clamp(25px, 4vw, 45px);
+
+    max-width: 650px;
+
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+
+    line-height: 1.7;
+
+    max-width: 600px;
+
+    color: #e4eee7;
+
+    margin-bottom: 35px;
+}
+
+
+/* =====================================
+   BOTONES
+===================================== */
+
+.botones {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.boton {
+    display: inline-block;
+
+    padding: 15px 28px;
+
+    border-radius: 8px;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.boton.principal {
+    background: #67e38a;
+    color: #102016;
+}
+
+.boton.principal:hover {
+    transform: translateY(-4px);
+}
+
+.boton.secundario {
+    border: 2px solid white;
+    color: white;
+}
+
+.boton.secundario:hover {
+    background: white;
+    color: #102016;
+}
+
+
+/* =====================================
+   SECCIONES
+===================================== */
+
+.seccion {
+    padding: 110px 8%;
+}
+
+.titulo-seccion {
+    margin-bottom: 60px;
+}
+
+.titulo-seccion span {
+    color: #31a85a;
+
+    font-size: 14px;
+
+    font-weight: bold;
+}
+
+.titulo-seccion h2 {
+    font-size: clamp(35px, 5vw, 60px);
+
+    margin-top: 8px;
+}
+
+.titulo-seccion h2 strong {
+    color: #31a85a;
+}
+
+.centrado {
+    text-align: center;
+}
+
+.centrado p {
+    margin: 15px auto;
+    max-width: 600px;
+}
+
+
+/* =====================================
+   PRESENTACIÓN
+===================================== */
+
+.contenido-juego {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 70px;
+
+    align-items: center;
+}
+
+.texto p {
+    font-size: 18px;
+
+    line-height: 1.8;
+
+    margin-bottom: 20px;
+
+    color: #536158;
+}
+
+
+/* =====================================
+   TARJETAS
+===================================== */
+
+.tarjetas {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 15px;
+}
+
+.tarjeta {
+    background: white;
+
+    padding: 30px 20px;
+
+    border-radius: 15px;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+
+    transition: 0.3s;
+}
+
+.tarjeta:hover {
+    transform: translateY(-8px);
+}
+
+.icono {
+    font-size: 38px;
+
+    margin-bottom: 20px;
+}
+
+.tarjeta h3 {
+    margin-bottom: 10px;
+}
+
+.tarjeta p {
+    color: #69756e;
+
+    line-height: 1.5;
+}
+
+
+/* =====================================
+   SECCIÓN OSCURA
+===================================== */
+
+.oscura {
+    background: #0d1b13;
+
+    color: white;
+}
+
+.oscura .titulo-seccion h2 {
+    color: white;
+}
+
+
+/* =====================================
+   PASOS
+===================================== */
+
+.pasos {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 30px;
+}
+
+.paso {
+    display: flex;
+
+    gap: 25px;
+
+    padding: 30px;
+
+    border: 1px solid rgba(255,255,255,0.1);
+
+    border-radius: 15px;
+
+    background: rgba(255,255,255,0.03);
+
+    transition: 0.3s;
+}
+
+.paso:hover {
+    transform: translateY(-5px);
+
+    border-color: #67e38a;
+}
+
+.numero {
+    min-width: 55px;
+    height: 55px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #67e38a;
+
+    color: #102016;
+
+    font-weight: bold;
+}
+
+.paso h3 {
+    font-size: 22px;
+
+    margin-bottom: 10px;
+}
+
+.paso p {
+    color: #b7c5bb;
+
+    line-height: 1.6;
+}
+
+
+/* =====================================
+   OBJETIVO
+===================================== */
+
+.objetivo {
+    background: #e9f6ed;
+}
+
+.objetivo-contenido {
+    display: grid;
+
+    grid-template-columns: 1.3fr 0.7fr;
+
+    gap: 80px;
+
+    align-items: center;
+}
+
+.objetivo-contenido > div:first-child > p {
+    max-width: 700px;
+
+    color: #536158;
+
+    font-size: 18px;
+
+    line-height: 1.8;
+
+    margin-bottom: 20px;
+}
+
+.objetivo-box {
+    text-align: center;
+
+    padding: 50px 30px;
+
+    background: white;
+
+    border-radius: 20px;
+
+    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+}
+
+.planeta {
+    font-size: 80px;
+
+    margin-bottom: 20px;
+}
+
+.objetivo-box h3 {
+    font-size: 25px;
+
+    margin-bottom: 15px;
+}
+
+.objetivo-box p {
+    color: #68746d;
+
+    line-height: 1.6;
+}
+
+
+/* =====================================
+   RESIDUOS
+===================================== */
+
+.residuos {
+    background: white;
+}
+
+.residuos-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.residuo {
+    text-align: center;
+
+    padding: 40px 20px;
+
+    border-radius: 15px;
+
+    background: #f5f8f6;
+
+    transition: 0.3s;
+}
+
+.residuo:hover {
+    transform: translateY(-8px);
+}
+
+.residuo > div {
+    font-size: 55px;
+
+    margin-bottom: 20px;
+}
+
+.residuo h3 {
+    margin-bottom: 10px;
+}
+
+.residuo p {
+    color: #69756e;
+
+    line-height: 1.5;
+}
+
+
+/* =====================================
+   CARACTERÍSTICAS
+===================================== */
+
+.caracteristicas {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.caracteristicas > div {
+    padding: 35px 25px;
+
+    border: 1px solid rgba(255,255,255,0.1);
+
+    border-radius: 15px;
+
+    transition: 0.3s;
+}
+
+.caracteristicas > div:hover {
+    background: rgba(255,255,255,0.05);
+
+    transform: translateY(-5px);
+}
+
+.caracteristicas span {
+    font-size: 40px;
+}
+
+.caracteristicas h3 {
+    margin: 20px 0 10px;
+}
+
+.caracteristicas p {
+    color: #aebbb2;
+}
+
+
+/* =====================================
+   DESCARGAR
+===================================== */
+
+.descargar {
+    padding: 130px 20px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            rgba(14, 75, 35, 0.93),
+            rgba(7, 45, 20, 0.95)
+        );
+    
+    color: white;
+}
+
+.descargar-contenido {
+    max-width: 750px;
+
+    margin: auto;
+}
+
+.descargar-icono {
+    font-size: 70px;
+
+    margin-bottom: 20px;
+}
+
+.descargar h2 {
+    font-size: clamp(40px, 6vw, 65px);
+
+    margin-bottom: 20px;
+}
+
+.descargar p {
+    font-size: 19px;
+
+    line-height: 1.7;
+
+    color: #d7e9dc;
+
+    margin-bottom: 35px;
+}
+
+.descargar-boton {
+    background: #67e38a;
+
+    color: #102016;
+
+    font-size: 18px;
+}
+
+.descargar-boton:hover {
+    transform: translateY(-5px);
+
+    background: white;
+}
+
+.descargar small {
+    display: block;
+
+    margin-top: 20px;
+
+    color: #b9d6c1;
+}
+
+
+/* =====================================
+   FOOTER
+===================================== */
+
+footer {
+    background: #07100b;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 50px 20px;
+}
+
+.footer-logo {
+    font-size: 25px;
+
+    font-weight: bold;
+
+    margin-bottom: 15px;
+}
+
+footer p {
+    color: #aab8ae;
+
+    margin-bottom: 30px;
+}
+
+.copyright {
+    color: #637068;
+
+    font-size: 13px;
+}
+
+
+/* =====================================
+   RESPONSIVE - TABLET
+===================================== */
+
+@media (max-width: 900px) {
+
+    .navbar {
+        padding: 0 4%;
+    }
+
+    .navbar nav {
+        gap: 12px;
+    }
+
+    .navbar nav a {
+        font-size: 13px;
+    }
+
+    .contenido-juego {
+        grid-template-columns: 1fr;
+    }
+
+    .objetivo-contenido {
+        grid-template-columns: 1fr;
+    }
+
+    .residuos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .caracteristicas {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* =====================================
+   RESPONSIVE - CELULAR
+===================================== */
+
+@media (max-width: 600px) {
+
+    .navbar {
+        height: auto;
+
+        padding: 18px 20px;
+
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+    .navbar nav {
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+    .hero {
+        min-height: 100vh;
+
+        background-position: center;
+    }
+
+    .hero-contenido {
+        padding-top: 100px;
+    }
+
+    .hero h1 {
+        font-size: 65px;
+
+        letter-spacing: -3px;
+    }
+
+    .hero h2 {
+        font-size: 28px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .seccion {
+        padding: 75px 6%;
+    }
+
+    .tarjetas {
+        grid-template-columns: 1fr;
+    }
+
+    .pasos {
+        grid-template-columns: 1fr;
+    }
+
+    .residuos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .caracteristicas {
+        grid-template-columns: 1fr;
+    }
+
+    .objetivo-contenido {
+        gap: 40px;
+    }
+
+    .descargar {
+        padding: 90px 20px;
+    }
+
+}
