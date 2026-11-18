@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -9,7 +10,26 @@
     <link rel="stylesheet" href="estilos.css">
     <link rel="manifest" href="manifest.json">
 
+    <!-- OneSignal -->
+    <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+
+    <script>
+        window.OneSignalDeferred = window.OneSignalDeferred || [];
+
+        OneSignalDeferred.push(async function(OneSignal) {
+            await OneSignal.init({
+                appId: "eb33d5aa-3e16-4982-9d0b-4a2b0996380c",
+                serviceWorkerPath: "/push/onesignal/OneSignalSDKWorker.js",
+                serviceWorkerParam: {
+                    scope: "/push/onesignal/"
+                },
+                serviceWorkerOverrideForTypical: true
+            });
+        });
+    </script>
+
 </head>
+
 
 <body>
 
