@@ -1,4 +1,4 @@
-const CACHE_NAME = "Ecorunner-pwa-1";
+const CACHE_NAME = "Ecorunner-pwa-2";
 
 
 const archivos = [
