@@ -19,11 +19,32 @@
         OneSignalDeferred.push(async function(OneSignal) {
             await OneSignal.init({
                 appId: "eb33d5aa-3e16-4982-9d0b-4a2b0996380c",
+
                 serviceWorkerPath: "/push/onesignal/OneSignalSDKWorker.js",
                 serviceWorkerParam: {
                     scope: "/push/onesignal/"
                 },
-                serviceWorkerOverrideForTypical: true
+                serviceWorkerOverrideForTypical: true,
+
+                promptOptions: {
+                    slidedown: {
+                        prompts: [
+                            {
+                                type: "push",
+                                autoPrompt: true,
+                                text: {
+                                    actionMessage: "Activa las notificaciones de EcoRunner y recibe novedades y consejos de reciclaje.",
+                                    acceptButton: "Suscribirme",
+                                    cancelButton: "Más tarde"
+                                },
+                                delay: {
+                                    pageViews: 1,
+                                    timeDelay: 5
+                                }
+                            }
+                        ]
+                    }
+                }
             });
         });
     </script>
